@@ -431,10 +431,10 @@ class NumberPickerComponent {
      * @return {?}
      */
     initPicker() {
-        this.min = this.parseVal(this.min) || this.numberPickerService.min;
-        this.max = this.parseVal(this.max) || this.numberPickerService.max;
+        this.min = isFinite(this.value) ? this.parseVal(this.min) : this.numberPickerService.min;
+        this.max = isFinite(this.value) ? this.parseVal(this.max) : this.numberPickerService.max;
         this.step = this.parseVal(this.step) || this.numberPickerService.step;
-        this.value = this.parseVal(this.value) || this.numberPickerService.value;
+        this.value = isFinite(this.value) ? this.parseVal(this.value) : this.numberPickerService.value;
         this.pickStartAfter = this.parseVal(this.pickStartAfter) || this.numberPickerService.pickStartAfter;
         this.pickTimer = this.parseVal(this.pickTimer) || this.numberPickerService.pickTimer;
         this.precision = this.getPrecision(this.step) || this.numberPickerService.precision;
