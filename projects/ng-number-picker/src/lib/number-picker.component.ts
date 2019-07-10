@@ -142,9 +142,9 @@ export class NumberPickerComponent implements OnInit {
     } else if (this.value < this.min) {
       this.value = this.min;
     }
-    var value = parseFloat(this.value);
-    if (isFinite(value)) {
-      this.valueChange.emit(value);
+    
+    if (isFinite(this.value)) {
+      this.valueChange.emit(this.value);
     } else {
       this.valueChange.emit(null);
     }
