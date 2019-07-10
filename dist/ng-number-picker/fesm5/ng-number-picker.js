@@ -468,7 +468,7 @@ var NumberPickerComponent = /** @class */ (function () {
      * @return {?}
      */
     function (value) {
-        return Math.round(value * Math.pow(10, this.precision)) / Math.pow(10, this.precision);
+        return value === null ? null : Math.round(value * Math.pow(10, this.precision)) / Math.pow(10, this.precision);
     };
     /**
      * @private
