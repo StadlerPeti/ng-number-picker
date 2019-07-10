@@ -456,7 +456,7 @@ NumberPickerComponent.decorators = [
   <div *ngIf="prefix" class="input-group-prepend">
     <span class="input-group-text {{customClass.prefix}}">{{prefix}}</span>
   </div>
-  <input type="number" class="form-control" name="input-spin-val"
+  x<input type="number" class="form-control" name="input-spin-val"
   [(ngModel)]="value"
   [readOnly]="inputReadOnly"
   (blur)="onBlur($event)"
