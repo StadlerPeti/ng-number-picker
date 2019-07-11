@@ -3,6 +3,9 @@ input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+input[type=number] {
+    -moz-appearance:textfield;
+}
 .increase:hover, .decrease:hover {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
